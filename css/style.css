@@ -19,12 +19,16 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 body{
+	width: 100vw;
 	background: url(../background/156169-estetika-animaciya-art-anime-oblako-1920x1080.jpg) no-repeat fixed center;
-	
+	background-position: center;
+	background-size: cover;
+
 }
 table {
 	border-bottom: none;
 	border-right: none;
+	width: 100%;
 }
 h1{
 	padding-top: 3%;
@@ -42,6 +46,13 @@ main p{
 }
 header {
 	width: 100vw;
+}
+
+.flex_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .head {
@@ -71,7 +82,9 @@ td:hover{
 #dates{
 	margin-left: 1.8%;
 }
-#dates>p{
+#dates p{
+	width: 100%;
+	text-align: center;
 	text-align: center;
 	color: rgb(183,219,0);
 	margin-bottom: 2%;
@@ -79,6 +92,7 @@ td:hover{
 	border-radius: 20px;
 	padding: 8px;
 }
+
 #container>div{
 	margin-top: 3.8%;
 	margin-left: 1.8%;
@@ -89,19 +103,50 @@ td:hover{
 	font-weight: bold;
 	margin-bottom: 1.8%;
 }
-footer{
-	margin-bottom: 20px;
-	margin-top: 50px;
-	margin-left: 20px;
-	margin-right: 20px;
+
+.footer { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	font-size: 20px;
 	background-color: rgba(183,219,0,0.7);
-	padding: 30px;
 	border-radius: 100px;
-	text-align: center;
+	padding: 30px;
+
 }
-@media only screen and (max-width: 600px) {
-	body {
-		background: url(../background/156169-estetika-animaciya-art-anime-oblako-1920x1080.jpg) no-repeat ;
+@media only screen and (max-width: 1000px) {
+	main {
+		flex-direction: column;
 	}
+
+	#content {
+		height: auto;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.head {
+		margin-top: 10px;
+	}
+	main {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	td{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 2px;
+	}
+
+	.flex_container {
+		width: 80vh;
+	}
+
+	.footer{
+		font-size: 24px;
+		text-align: center;
+		/* BLYAT"! */
+	}
+
 }
